@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>郑州海志诚汽车零部件有限公司-汽车零部件制造商</title>
+    <title>海志诚汽车零部件有限公司-汽车零部件制造商</title>
     <!-- 稳定CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,13 +13,10 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#C8102E', // 工业级沉稳红，贴合制造行业调性
-                        secondary: '#0F4C81', // 商务专业深蓝
-                        dark: '#0A1F38', // 深邃底色提升质感
-                        light: '#F5F7FA', // 全局柔和工业浅灰背景
-                        neutral: '#64748B', // 中性辅助灰
-                        card: '#FFFFFF', // 卡片纯白底色
-                        section: '#F8FAFC', // 交替区块背景
+                        primary: '#E63946',
+                        secondary: '#457B9D',
+                        dark: '#1D3557',
+                        light: '#F1FAEE',
                     },
                     fontFamily: {
                         sans: ['Inter','system-ui','sans-serif'],
@@ -40,54 +37,46 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
-        /* 全局背景升级：添加细微工业纹理底色 */
-        body {
-            background-color: #F5F7FA;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
         .content-auto { content-visibility: auto; }
-        .text-shadow { text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-        .transition-custom { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        /* 产品卡片背景质感升级 */
+        .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .transition-custom { transition: all 0.3s ease-in-out; }
         .product-card {
-            @apply bg-card rounded-lg shadow-md hover:shadow-xl hover:translate-y-[-5px] transition-custom p-4 border border-gray-100;
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            @apply bg-white rounded-lg shadow-md hover:shadow-xl transition-custom p-4 border border-gray-100;
         }
-        /* 设备卡片背景质感升级 */
         .equipment-card {
-            @apply bg-card rounded-lg shadow-md hover:shadow-xl hover:translate-y-[-5px] transition-custom overflow-hidden border border-gray-100;
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            @apply bg-white rounded-lg shadow-md hover:shadow-xl transition-custom overflow-hidden border border-gray-100;
         }
         .equipment-img {
             @apply w-full h-56 object-contain bg-white p-2;
         }
-        /* 品牌标签背景质感升级 */
         .brand-tag {
-            @apply bg-white rounded-lg shadow-sm p-3 text-center hover:shadow-md hover:bg-primary/5 hover:border-primary/20 transition-custom border border-gray-100;
+            @apply bg-white rounded-lg shadow-sm p-3 text-center hover:shadow-md hover:bg-primary/5 transition-custom border border-gray-100;
         }
         .ecu-tag {
-            @apply bg-white rounded-md p-2 text-center border border-gray-200 hover:border-primary/30 hover:bg-primary/5 transition-custom text-sm;
+            @apply bg-white rounded-md p-2 text-center border border-gray-200 text-sm;
         }
-        /* 工厂卡片背景质感升级 */
         .factory-card {
-            @apply bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-custom;
+            @apply bg-white rounded-lg shadow-md overflow-hidden;
         }
         .factory-img {
             @apply h-60 w-full object-cover;
         }
-        /* 区块背景渐变遮罩 */
-        .section-gradient {
-            background: linear-gradient(180deg, rgba(245,247,250,0) 0%, rgba(245,247,250,1) 100%);
+        /* 产品图片点击效果 */
+        .product-img-link {
+            @apply block cursor-pointer;
+        }
+        .product-img-link:hover img {
+            @apply scale-105;
+        }
+        .product-img-link img {
+            @apply transition-transform duration-300;
         }
     </style>
 </head>
-<body class="font-sans text-dark">
+<body class="font-sans text-dark bg-white">
 
-<!-- 导航栏 - 升级磨砂玻璃质感 + 新LOGO + 公司名称更新 -->
-<nav id="navbar" class="fixed top-0 left-0 w-full z-[9999] transition-custom py-4 bg-dark/85 backdrop-blur-lg shadow-sm">
+<!-- 导航栏 - 已更新公司LOGO -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-[9999] transition-custom py-4 bg-dark/90">
     <div class="w-full px-4 md:px-8 flex justify-between items-center">
         <a href="#" class="text-2xl font-bold text-shadow text-white flex items-center">
             <img src="https://s41.ax1x.com/2026/03/23/peKFqJJ.png" 
@@ -127,10 +116,9 @@
     </div>
 </nav>
 
-<!-- 首页banner - 背景渐变升级 + 公司名称更新 -->
-<section id="home" class="w-screen h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/1071/1920/1080');">
-    <div class="absolute inset-0 bg-gradient-to-b from-dark/90 to-dark/60"></div>
-    <div class="section-gradient absolute inset-0 top-1/2"></div>
+<!-- 首页banner -->
+<section id="home" class="w-screen h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1071/1920/1080');">
+    <div class="absolute inset-0 bg-dark/70"></div>
     <div class="w-full px-4 relative z-10 text-center">
         <h1 class="text-[clamp(2.8rem,6vw,4.5rem)] font-bold text-white mb-6 leading-tight text-shadow">
             海志诚汽车零部件 <span class="text-secondary">品质铸就未来</span>
@@ -148,17 +136,17 @@
     </div>
 </section>
 
-<!-- 关于我们 - 背景升级为纯白区块，与全局纹理形成区分 -->
-<section id="about" class="w-screen py-24 bg-white">
+<!-- 关于我们 -->
+<section id="about" class="w-screen py-24 bg-light">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">关于我们</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-neutral max-w-4xl mx-auto text-lg">专业的汽车零部件生产企业，集研发、生产、销售、国际贸易于一体</p>
+            <p class="text-gray-600 max-w-4xl mx-auto text-lg">专业的汽车零部件生产企业，集研发、生产、销售、国际贸易于一体</p>
         </div>
         <div class="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <div>
-                <img src="https://s41.ax1x.com/2026/03/21/pen00rq.png" alt="厂区" class="rounded-lg shadow-lg w-full h-auto">
+                <img src="https://s41.ax1x.com/2026/03/21/pen00rq.png" alt="厂区" class="rounded-lg shadow-lg w-full h-auto" onerror="this.style.objectFit='cover'">
             </div>
             <div>
                 <h3 class="text-2xl font-semibold mb-6 text-primary">公司简介</h3>
@@ -168,10 +156,10 @@
                 <p class="text-gray-700 mb-6 leading-relaxed text-lg">
                     并利用丰富的行业资源及影响力，开展产品，技术，市场和项目的咨询服务，公司凭借准确的市场定位和人性化管理，积累了丰富的生产管理和经营管理的经验，已发展成为集生产、研发、销售、国际贸易于一体的专业的汽车零部件生产企业。
                 </p>
-                <p class="text-neutral text-base leading-relaxed italic mb-6">
+                <p class="text-gray-600 text-base leading-relaxed italic mb-6">
                     The company has a professional technical team, advanced testing equipment, and a complete production process. Through the testing and R&D of auto parts, exhibition and display, and industrial base, we provide high-quality value-added services for domestic and foreign customers.
                 </p>
-                <p class="text-neutral text-base leading-relaxed italic mb-6">
+                <p class="text-gray-600 text-base leading-relaxed italic mb-6">
                     Leveraging abundant industry resources and influence, we provide consulting services covering products, technology, market and projects. With accurate market positioning and humanized management, the company has accumulated rich experience in production management and operation management, and has developed into a professional auto parts manufacturer integrating production, R&D, sales and international trade.
                 </p>
                 <a href="#contact" class="inline-block mt-4 bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-custom text-lg">联系我们</a>
@@ -180,45 +168,45 @@
     </div>
 </section>
 
-<!-- 核心业务 - 背景保留全局纹理，卡片做渐变质感升级 -->
-<section id="services" class="w-screen py-24 bg-transparent">
+<!-- 核心业务 -->
+<section id="services" class="w-screen py-24 bg-white">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">核心业务</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-neutral max-w-4xl mx-auto text-lg">全方位的汽车电子解决方案，覆盖研发、生产、销售全流程</p>
+            <p class="text-gray-600 max-w-4xl mx-auto text-lg">全方位的汽车电子解决方案，覆盖研发、生产、销售全流程</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
             <!-- 产品销售 -->
-            <div class="bg-white rounded-lg p-10 shadow-md hover:shadow-xl transition-custom">
+            <div class="bg-light rounded-lg p-10 shadow-md hover:shadow-xl">
                 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-8">
                     <i class="fa-solid fa-store text-3xl text-primary"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-6">产品销售</h3>
                 <p class="text-gray-700 text-lg mb-4">汽油、柴油、变速箱、新能源电脑板全系销售，支持零售、批发、代发、来样定制。</p>
-                <p class="text-neutral text-base leading-relaxed italic">
+                <p class="text-gray-600 text-base leading-relaxed italic">
                     Full-range sales of gasoline, diesel, gearbox and new energy vehicle ECU boards, supporting retail, wholesale, drop shipping and sample customization.
                 </p>
             </div>
             <!-- 生产制造 -->
-            <div class="bg-white rounded-lg p-10 shadow-md hover:shadow-xl transition-custom">
+            <div class="bg-light rounded-lg p-10 shadow-md hover:shadow-xl">
                 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-8">
                     <i class="fa-solid fa-industry text-3xl text-primary"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-6">生产制造</h3>
                 <p class="text-gray-700 text-lg mb-4">OEM代工、SMT贴片、插件测试、电子元器件配套生产。</p>
-                <p class="text-neutral text-base leading-relaxed italic">
+                <p class="text-gray-600 text-base leading-relaxed italic">
                     OEM contract manufacturing, SMT mounting, component insertion and testing, as well as supporting production of electronic components.
                 </p>
             </div>
             <!-- 研发维修 -->
-            <div class="bg-white rounded-lg p-10 shadow-md hover:shadow-xl transition-custom">
+            <div class="bg-light rounded-lg p-10 shadow-md hover:shadow-xl">
                 <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-8">
                     <i class="fa-solid fa-flask-vial text-3xl text-primary"></i>
                 </div>
                 <h3 class="text-2xl font-semibold mb-6">研发维修</h3>
                 <p class="text-gray-700 text-lg mb-4">模块维修、在线编程、防盗匹配、故障诊断、数据制作。</p>
-                <p class="text-neutral text-base leading-relaxed italic">
+                <p class="text-gray-600 text-base leading-relaxed italic">
                     Module maintenance, online programming, anti-theft matching, fault diagnosis and data programming services.
                 </p>
             </div>
@@ -226,13 +214,13 @@
     </div>
 </section>
 
-<!-- 工厂设备模块 - 背景升级为纯白区块 -->
-<section id="factory-equipment" class="w-screen py-24 bg-white">
+<!-- 工厂设备模块 -->
+<section id="factory-equipment" class="w-screen py-24 bg-light">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">工厂设备</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-neutral max-w-4xl mx-auto text-lg">全流程自动化生产设备，保障产品微米级精度与稳定品质</p>
+            <p class="text-gray-600 max-w-4xl mx-auto text-lg">全流程自动化生产设备，保障产品微米级精度与稳定品质</p>
         </div>
 
         <!-- 10台设备卡片网格 -->
@@ -310,19 +298,19 @@
         </div>
 
         <!-- 底部中英文说明文字 -->
-        <div class="bg-section p-8 rounded-lg shadow-md max-w-7xl mx-auto">
+        <div class="bg-white p-8 rounded-lg shadow-md max-w-7xl mx-auto">
             <p class="text-gray-700 leading-relaxed mb-4 text-lg">
                 高品质专业PCB打样，高精度SMT加工，实现微米级精准控制，定制生产一站式服务，提供一站式自动化ECU电子控制单元配套服务,从设计到生产直供，自动化加工生产线，融合先进技术与精细管理打造卓越品质产品。
             </p>
-            <p class="text-neutral text-base leading-relaxed italic">
+            <p class="text-gray-600 text-base leading-relaxed italic">
                 High-quality professional PCB prototyping and high-precision SMT processing with micron-level precision control. We provide one-stop customized production services, as well as full-cycle automated supporting services for ECU (Electronic Control Unit), from design to direct production supply. With automated processing production lines, we integrate advanced technology and refined management to create products with superior quality.
             </p>
         </div>
     </div>
 </section>
 
-<!-- 工厂实景 - 背景保留全局纹理 -->
-<section id="factory" class="w-screen py-24 bg-transparent">
+<!-- 工厂实景 -->
+<section id="factory" class="w-screen py-24 bg-white">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">工厂实景</h2>
@@ -331,37 +319,37 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12 max-w-7xl mx-auto">
             <div class="factory-card">
-                <img src="https://s41.ax1x.com/2026/03/21/penD7gH.png" alt="物料配套作业区" class="factory-img h-72">
+                <img src="https://s41.ax1x.com/2026/03/21/penD7gH.png" alt="物料配套作业区" class="factory-img h-72" onerror="this.style.objectFit='cover'">
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-semibold">物料配套作业区</h3>
                 </div>
             </div>
             <div class="factory-card">
-                <img src="https://s41.ax1x.com/2026/03/21/penDHvd.png" alt="SMT车间" class="factory-img h-72">
+                <img src="https://s41.ax1x.com/2026/03/21/penDHvd.png" alt="SMT车间" class="factory-img h-72" onerror="this.style.objectFit='cover'">
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-semibold">SMT车间</h3>
                 </div>
             </div>
             <div class="factory-card">
-                <img src="https://s41.ax1x.com/2026/03/21/penDObt.png" alt="AIO车间" class="factory-img h-72">
+                <img src="https://s41.ax1x.com/2026/03/21/penDObt.png" alt="AIO车间" class="factory-img h-72" onerror="this.style.objectFit='cover'">
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-semibold">AIO车间</h3>
                 </div>
             </div>
             <div class="factory-card">
-                <img src="https://s41.ax1x.com/2026/03/21/penDjVP.jpg" alt="三防车间" class="factory-img h-72">
+                <img src="https://s41.ax1x.com/2026/03/21/penDjVP.jpg" alt="三防车间" class="factory-img h-72" onerror="this.style.objectFit='cover'">
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-semibold">三防车间</h3>
                 </div>
             </div>
             <div class="factory-card">
-                <img src="https://s41.ax1x.com/2026/03/21/penDvUf.jpg" alt="装配车间" class="factory-img h-72">
+                <img src="https://s41.ax1x.com/2026/03/21/penDvUf.jpg" alt="装配车间" class="factory-img h-72" onerror="this.style.objectFit='cover'">
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-semibold">装配车间</h3>
                 </div>
             </div>
             <div class="factory-card">
-                <img src="https://s41.ax1x.com/2026/03/21/penDx58.png" alt="功能测试" class="factory-img h-72">
+                <img src="https://s41.ax1x.com/2026/03/21/penDx58.png" alt="功能测试" class="factory-img h-72" onerror="this.style.objectFit='cover'">
                 <div class="p-6 text-center">
                     <h3 class="text-xl font-semibold">功能测试</h3>
                 </div>
@@ -370,45 +358,45 @@
 
         <div class="bg-white p-8 rounded-lg shadow-md max-w-7xl mx-auto">
             <p class="text-gray-700 leading-relaxed mb-4 text-lg">
-                郑州海志诚拥有专业的采购团队，为多家客户提供PCBA到成品装配代工代料(阻容、二三板管、集成电路、晶版、电感、接插件、PCB、塑胶、五金等)。公司与多家电子元件工厂和代理商建立有长期稳定的合作关系:具备良好的供货周期和供成本优势:减少客户在研发阶段的采购成本及采购时间，严格的供应商稽核管理体系和IQC来料检验，恒温恒湿、ESD静电防护、先进先出管理，确保供应链源流品质
+                海志诚拥有专业的采购团队，为多家客户提供PCBA到成品装配代工代料(阻容、二三板管、集成电路、晶版、电感、接插件、PCB、塑胶、五金等)。公司与多家电子元件工厂和代理商建立有长期稳定的合作关系:具备良好的供货周期和供成本优势:减少客户在研发阶段的采购成本及采购时间，严格的供应商稽核管理体系和IQC来料检验，恒温恒湿、ESD静电防护、先进先出管理，确保供应链源流品质
             </p>
-            <p class="text-neutral text-base leading-relaxed italic">
-                Zhengzhou Haizhicheng has a professional purchasing team, providing PCBA to finished product assembly OEM and component sourcing services (resistors, capacitors, diodes, triodes, integrated circuits, crystal oscillators, inductors, connectors, PCBs, plastics, hardware, etc.) for multiple customers. The company has established long-term and stable cooperative relationships with many electronic component factories and agents: it has advantages in good delivery cycles and supply costs; reduces customers' purchasing costs and time during the R&D stage; strict supplier audit management system and IQC incoming inspection, constant temperature and humidity, ESD electrostatic protection, and FIFO management to ensure the quality of the supply chain from the source.
+            <p class="text-gray-600 text-base leading-relaxed italic">
+                Haizhicheng has a professional purchasing team, providing PCBA to finished product assembly OEM and component sourcing services (resistors, capacitors, diodes, triodes, integrated circuits, crystal oscillators, inductors, connectors, PCBs, plastics, hardware, etc.) for multiple customers. The company has established long-term and stable cooperative relationships with many electronic component factories and agents: it has advantages in good delivery cycles and supply costs; reduces customers' purchasing costs and time during the R&D stage; strict supplier audit management system and IQC incoming inspection, constant temperature and humidity, ESD electrostatic protection, and FIFO management to ensure the quality of the supply chain from the source.
             </p>
         </div>
     </div>
 </section>
 
-<!-- 自研检测设备 - 背景升级为纯白区块 -->
-<section id="equipment" class="w-screen py-24 bg-white">
+<!-- 自研检测设备 -->
+<section id="equipment" class="w-screen py-24 bg-light">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">自研检测设备</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p class="text-neutral max-w-4xl mx-auto text-lg">先进的自研检测设备，确保产品品质稳定可靠</p>
+            <p class="text-gray-600 max-w-4xl mx-auto text-lg">先进的自研检测设备，确保产品品质稳定可靠</p>
         </div>
         <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            <div class="bg-section rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-custom">
-                <img src="https://s41.ax1x.com/2026/03/19/pemm8C4.png" class="w-full h-80 object-cover" alt="国产车防盗匹配平台">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://s41.ax1x.com/2026/03/19/pemm8C4.png" class="w-full h-80 object-cover" alt="国产车防盗匹配平台" onerror="this.style.objectFit='cover'">
                 <div class="p-8"><h3 class="text-2xl font-semibold">国产车防盗匹配平台</h3></div>
             </div>
-            <div class="bg-section rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-custom">
-                <img src="https://s41.ax1x.com/2026/03/19/pemmG8J.png" class="w-full h-80 object-cover" alt="ECU综合测试平台">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://s41.ax1x.com/2026/03/19/pemmG8J.png" class="w-full h-80 object-cover" alt="ECU综合测试平台" onerror="this.style.objectFit='cover'">
                 <div class="p-8"><h3 class="text-2xl font-semibold">ECU综合测试平台</h3></div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 适配车型 - 背景保留全局纹理 -->
-<section id="series" class="w-screen py-24 bg-transparent">
+<!-- 适配车型 - 已修正MTO5为MT05 -->
+<section id="series" class="w-screen py-24 bg-white">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">适配车型</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto">
-            <div class="bg-white p-8 rounded-lg shadow-md h-full">
+            <div class="bg-light p-8 rounded-lg shadow-md h-full">
                 <h3 class="text-2xl font-semibold text-center mb-8 text-primary">ECU 电脑系列</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <div class="ecu-tag text-base py-3">M7</div>
@@ -458,7 +446,7 @@
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-md h-full">
+            <div class="bg-light p-8 rounded-lg shadow-md h-full">
                 <h3 class="text-2xl font-semibold text-center mb-8 text-primary">Vehicle Brand</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     <div class="brand-tag text-base py-4">奔驰/Mercedes-E</div>
@@ -494,111 +482,180 @@
     </div>
 </section>
 
-<!-- 产品展示 - 背景升级为纯白区块 -->
-<section id="products" class="w-screen py-24 bg-white">
+<!-- 产品展示 - 已添加点击查看原图功能，第29位已替换 -->
+<section id="products" class="w-screen py-24 bg-light">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">产品展示</h2>
             <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p class="text-gray-600 text-lg">点击图片可查看原图</p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 w-full">
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZjtfg.png" alt="产品展示1" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZjtfg.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZjtfg.png" alt="产品展示1" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZjYtS.png" alt="产品展示2" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZjYtS.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZjYtS.png" alt="产品展示2" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZj30P.png" alt="产品展示3" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZj30P.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZj30P.png" alt="产品展示3" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZj1mt.png" alt="产品展示4" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZj1mt.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZj1mt.png" alt="产品展示4" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第一行第5列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/05/08/peqUUcq.md.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/05/08/peqUUcq.md.png" alt="产品展示5" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第二行第1列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/05/08/peqUN3n.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/05/08/peqUN3n.png" alt="产品展示6" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第二行第2列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/03/20/penSYVA.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/penSYVA.png" alt="产品展示7" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第二行第3列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/05/08/peqU1HS.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/05/08/peqU1HS.png" alt="产品展示8" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZjM6A.png" alt="产品展示5" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/18/peeMWgH.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/18/peeMWgH.png" alt="产品展示9" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第二行第5列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/05/08/peqUlB8.jpg" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/05/08/peqUlB8.jpg" alt="产品展示10" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeMTVP.png" alt="产品展示6" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/18/peeM6UK.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/18/peeM6UK.png" alt="产品展示11" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第三行第2列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/03/17/peZjM6A.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZjM6A.png" alt="产品展示12" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeMIbt.png" alt="产品展示7" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/18/peeMrHx.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/18/peeMrHx.png" alt="产品展示13" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeM4KA.png" alt="产品展示8" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZjJk8.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZjJk8.png" alt="产品展示14" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeMWgH.png" alt="产品展示9" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZj8Tf.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZj8Tf.png" alt="产品展示15" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeM2CD.png" alt="产品展示10" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/17/peZjQOI.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/17/peZjQOI.png" alt="产品展示16" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeM6UK.png" alt="产品展示11" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/19/pemm7xs.jpg" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/19/pemm7xs.jpg" alt="产品展示17" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeMyE6.png" alt="产品展示12" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/19/pemmT2j.jpg" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/19/pemmT2j.jpg" alt="产品展示18" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/18/peeMrHx.png" alt="产品展示13" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/19/pemm4IS.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/19/pemm4IS.png" alt="产品展示19" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZjJk8.png" alt="产品展示14" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/19/pemmha8.jpg" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/19/pemmha8.jpg" alt="产品展示20" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZj8Tf.png" alt="产品展示15" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/19/pemmfVf.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/19/pemmfVf.png" alt="产品展示21" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/17/peZjQOI.png" alt="产品展示16" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/19/pemmRqP.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/19/pemmRqP.png" alt="产品展示22" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/19/pemm7xs.jpg" alt="产品展示17" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/20/peniSpt.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/peniSpt.png" alt="产品展示23" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第五行第4列 -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/05/08/peqUQnf.jpg" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/05/08/peqUQnf.jpg" alt="产品展示24" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/19/pemmT2j.jpg" alt="产品展示18" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/20/penStUI.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/penStUI.png" alt="产品展示25" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/19/pemm4IS.png" alt="产品展示19" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/20/penS3Ke.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/penS3Ke.png" alt="产品展示26" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/19/pemmha8.jpg" alt="产品展示20" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/20/penS8DH.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/penS8DH.png" alt="产品展示27" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/19/pemmfVf.png" alt="产品展示21" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/20/penSGbd.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/penSGbd.png" alt="产品展示28" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
+            </div>
+            <!-- 第六行第4列 - 第29位，已替换为peeM4KA.png -->
+            <div class="product-card">
+                <a href="https://s41.ax1x.com/2026/03/18/peeM4KA.png" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/18/peeM4KA.png" alt="产品展示29" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
             <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/19/pemmRqP.png" alt="产品展示22" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/peniSpt.png" alt="产品展示23" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penSYVA.png" alt="产品展示24" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penStUI.png" alt="产品展示25" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penS3Ke.png" alt="产品展示26" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penS8DH.png" alt="产品展示27" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penSGbd.png" alt="产品展示28" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penPxfI.jpg" alt="产品展示29" class="w-full h-auto object-contain rounded-md">
-            </div>
-            <div class="product-card">
-                <img src="https://s41.ax1x.com/2026/03/20/penSlvD.jpg" alt="产品展示30" class="w-full h-auto object-contain rounded-md">
+                <a href="https://s41.ax1x.com/2026/03/20/penSlvD.jpg" target="_blank" class="product-img-link">
+                    <img src="https://s41.ax1x.com/2026/03/20/penSlvD.jpg" alt="产品展示30" class="w-full h-auto object-contain rounded-md" onerror="this.style.display='none'">
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 联系我们 - 背景保留全局纹理 + 新增双手机号配置 -->
-<section id="contact" class="w-screen py-24 bg-transparent">
+<!-- 联系我们 - 已更新联系电话和微信二维码 -->
+<section id="contact" class="w-screen py-24 bg-light">
     <div class="w-full px-4 md:px-8">
         <div class="text-center mb-16">
             <h2 class="text-[clamp(2rem,3.5vw,3rem)] font-bold mb-4">联系我们</h2>
@@ -615,45 +672,39 @@
                         <div>
                             <h4 class="font-medium text-xl mb-2">公司地址</h4>
                             <p class="text-gray-700 text-lg mb-2">河南省郑州市管城回族区经济技术开发区第二十三大街中科智谷产业园2号楼</p>
-                            <p class="text-neutral text-base leading-relaxed italic">
+                            <p class="text-gray-600 text-base leading-relaxed italic">
                                 Building 2, Zhongke Zhigu Industrial Park, 23rd Avenue, Economic and Technological Development Zone, Guancheng Hui District, Zhengzhou City, Henan Province, China
                             </p>
                         </div>
                     </li>
-                    <!-- 联系电话 - 新增双手机号 -->
+                    <!-- 联系电话 -->
                     <li class="flex items-start">
                         <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-6">
                             <i class="fa-solid fa-phone text-2xl text-primary"></i>
                         </div>
                         <div>
                             <h4 class="font-medium text-xl mb-2">联系电话</h4>
-                            <p class="text-gray-700 text-lg mb-1">联系一号：19128796896</p>
-                            <p class="text-gray-700 text-lg mb-2">联系二号：19120698329</p>
-                            <p class="text-neutral text-base leading-relaxed italic">
-                                Contact Number 1: +86 19128796896
-                            </p>
-                            <p class="text-neutral text-base leading-relaxed italic">
-                                Contact Number 2: +86 19120698329
+                            <p class="text-gray-700 text-lg mb-1">19128796896</p>
+                            <p class="text-gray-700 text-lg mb-2">19120698329</p>
+                            <p class="text-gray-600 text-base leading-relaxed italic">
+                                Contact Numbers: +86 19128796896 / +86 19120698329
                             </p>
                         </div>
                     </li>
-                    <!-- 微信咨询 - 同步双手机号说明 -->
+                    <!-- 微信咨询 -->
                     <li class="flex items-start">
                         <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mr-6">
                             <i class="fa-brands fa-weixin text-2xl text-primary"></i>
                         </div>
                         <div>
                             <h4 class="font-medium text-xl mb-2">微信咨询</h4>
-                            <p class="text-gray-700 text-lg mb-1">一号微信：19128796896（微信同号）</p>
-                            <p class="text-gray-700 text-lg mb-2">二号微信：19120698329（微信同号）</p>
-                            <p class="text-neutral text-base leading-relaxed italic mb-2">
-                                WeChat ID 1: 19128796896 (same as phone number)
+                            <p class="text-gray-700 text-lg mb-1">19128796896</p>
+                            <p class="text-gray-700 text-lg mb-2">19120698329</p>
+                            <p class="text-gray-600 text-base leading-relaxed italic mb-2">
+                                WeChat IDs: 19128796896 / 19120698329
                             </p>
-                            <p class="text-neutral text-base leading-relaxed italic mb-2">
-                                WeChat ID 2: 19120698329 (same as phone number)
-                            </p>
-                            <p class="text-neutral text-base">扫码添加，支持产品咨询/报价/定制</p>
-                            <p class="text-neutral text-base leading-relaxed italic">
+                            <p class="text-gray-600 text-base">扫码添加，支持产品咨询/报价/定制</p>
+                            <p class="text-gray-600 text-base leading-relaxed italic">
                                 Scan the code to add us, we support product consultation, quotation and customization services
                             </p>
                         </div>
@@ -665,7 +716,7 @@
                 <h3 class="text-2xl font-semibold mb-6">微信扫码咨询</h3>
                 <img src="https://s41.ax1x.com/2026/03/23/peKS0KO.jpg" alt="微信二维码" class="w-72 h-72 rounded-lg shadow-sm object-contain" onerror="this.style.display='none'">
                 <p class="mt-4 text-gray-700 text-lg mb-2">批发/维修/定制/报价 一站式服务</p>
-                <p class="text-neutral text-base leading-relaxed italic">
+                <p class="text-gray-600 text-base leading-relaxed italic">
                     One-stop service covering wholesale, maintenance, customization and quotation
                 </p>
             </div>
@@ -673,10 +724,10 @@
     </div>
 </section>
 
-<!-- 页脚 - 公司名称更新 -->
+<!-- 页脚 - 已更新公司名称 -->
 <footer class="w-screen bg-dark text-white pt-20 pb-10">
     <div class="w-full px-4">
-        <p class="text-center text-gray-400 text-lg">© 2026 郑州海志诚汽车零部件有限公司版权所有</p>
+        <p class="text-center text-gray-400 text-lg">© 2026 海志诚汽车零部件有限公司版权所有</p>
     </div>
 </footer>
 
